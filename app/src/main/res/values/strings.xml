@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">CafeApp</string>
+    <string name="app_name">BK Chat</string>
+    <string name="welcome">Welcome To Chat App!</string>
+    <string name="login_to_continue">Login to continue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="your_name">Your Name</string>
+    <string name="create_new_account_sign_up">Create New Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="your_avatar">Your Avatar</string>
+    <string name="logo">Logo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chat">Chat</string>
+    <string name="contact_fragment">Contact</string>
+    <string name="settings">Settings</string>
+    <string name="log_out">Log Out</string>
+    <string name="update">Update</string>
+    <string name="description">Description</string>
+    <string name="search">Search</string>
+    <string name="send_to_link_your_email">Send Link To Your Email</string>
+    <string name="please_click_the_link_in_your_email_to_create_new_password">Please click the link in your email to create new password !</string>
+    <string name="forgot_your_password">Forgot Your Password</string>
+    <string name="email_incorrect">Email Incorrect !</string>
+    <string name="send">Send</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="scan_qr">Scan QR</string>
+    <string name="cancel_request">Cancel Request</string>
+    <string name="accept">Accept</string>
+    <string name="delete">Delete</string>
+    <string name="add_friend">Add Friend</string>
+    <string name="change_name_or_password">Change Name or Password</string>
 </resources>
