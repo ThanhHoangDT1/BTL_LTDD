@@ -10,7 +10,7 @@
     android:padding="@dimen/_24sdp"
     android:scrollbars="none"
 
-    >
+    tools:context=".activity.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,64 +22,64 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20sdp"
-            android:text="Đăng ký"
+            android:text="@string/create_new_account"
             android:textColor="@color/primary_text"
-            android:textSize="30sp"
+            android:textSize="23.4sp"
             android:textStyle="bold" />
 
-        <FrameLayout
-            android:id="@+id/layoutImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp">
+<!--        <FrameLayout-->
+<!--            android:id="@+id/layoutImage"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_20sdp">-->
 
 <!--            <com.makeramen.roundedimageview.RoundedImageView-->
 <!--                android:id="@+id/imageProfile"-->
 <!--                android:layout_width="@dimen/_80sdp"-->
 <!--                android:layout_height="@dimen/_80sdp"-->
-<!--&lt;!&ndash;                android:background="@drawable/background_image"&ndash;&gt;-->
+<!--                android:background="@drawable/background_image"-->
 <!--                android:scaleType="centerCrop"-->
 <!--                app:riv_oval="true" />-->
-            <TextView
-                android:id="@+id/textAddImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Thêm ảnh"
-                android:textColor="@color/secondary_text"
-                android:textSize="10sp"
+<!--            <TextView-->
+<!--                android:id="@+id/textAddImage"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:text="@string/add_image"-->
+<!--                android:textColor="@color/secondary_text"-->
+<!--                android:textSize="16.9sp"-->
 
-                />
+<!--                />-->
 
-        </FrameLayout>
+<!--        </FrameLayout>-->
         <EditText
             android:id="@+id/inputName"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_45sdp"
             android:layout_marginTop="@dimen/_20sdp"
             android:background="@drawable/background_input"
-            android:hint="Tên"
+            android:hint="@string/name"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="text"
             android:paddingStart="@dimen/_16sdp"
             android:paddingEnd="@dimen/_16sdp"
             android:textColor="@color/primary_text"
-            android:textSize="13sp" />
+            android:textSize="16.9sp" />
         <EditText
             android:id="@+id/inputEmail"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_45sdp"
             android:layout_marginTop="@dimen/_16sdp"
             android:background="@drawable/background_input"
-            android:hint="Tên đăng nhập"
+            android:hint="@string/email"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             android:paddingStart="@dimen/_16sdp"
             android:paddingEnd="@dimen/_16sdp"
             android:textColor="@color/primary_text"
-            android:textSize="13sp" />
+            android:textSize="16.9sp" />
 
         <EditText
             android:id="@+id/inputPassword"
@@ -87,14 +87,14 @@
             android:layout_height="@dimen/_45sdp"
             android:layout_marginTop="@dimen/_16sdp"
             android:background="@drawable/background_input"
-            android:hint="Mật khẩu"
+            android:hint="@string/password"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="textPassword"
             android:paddingStart="@dimen/_16sdp"
             android:paddingEnd="@dimen/_16sdp"
             android:textColor="@color/primary_text"
-            android:textSize="13sp" />
+            android:textSize="16.9sp" />
 
         <EditText
             android:id="@+id/inputConfirmPassword"
@@ -102,14 +102,14 @@
             android:layout_height="@dimen/_45sdp"
             android:layout_marginTop="@dimen/_16sdp"
             android:background="@drawable/background_input"
-            android:hint="Xác nhận mật khẩu"
+            android:hint="@string/confirm_password"
             android:imeOptions="actionDone"
             android:importantForAutofill="no"
             android:inputType="textPassword"
             android:paddingStart="@dimen/_16sdp"
             android:paddingEnd="@dimen/_16sdp"
             android:textColor="@color/primary_text"
-            android:textSize="13sp" />
+            android:textSize="16.9sp" />
         <FrameLayout
 
             android:layout_width="match_parent"
@@ -120,9 +120,9 @@
                 android:id="@+id/buttonSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
-                android:text="Thêm tài khoản"
+                android:text="@string/sign_up"
                 android:textColor="@color/white"
-                android:textSize="13sp"
+                android:textSize="16.9sp"
                 android:textStyle="bold"
                 app:cornerRadius="@dimen/_8sdp"
                 />
@@ -139,9 +139,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
-            android:text="Đăng nhập"
+            android:text="@string/sign_in"
             android:textColor="@color/primary"
-            android:textSize="20sp"
+            android:textSize="16.9sp"
             android:textStyle="bold"
             />
 

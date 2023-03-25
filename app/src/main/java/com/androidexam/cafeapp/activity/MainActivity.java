@@ -1,9 +1,11 @@
-package com.androidexam.cafeapp;
+package com.androidexam.cafeapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.androidexam.cafeapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
