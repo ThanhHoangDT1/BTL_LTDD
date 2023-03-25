@@ -54,13 +54,13 @@ public class RegisterActivity extends AppCompatActivity {
                     databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if(snapshot.hasChild(emailtxt)) {
+                            if(snapshot.hasChild(nametxt)) {
                                 Toast.makeText(RegisterActivity.this,"Email is already registered",Toast.LENGTH_SHORT).show();
                             }
                             else {
-                                databaseReference.child("users").child(emailtxt).child("email").setValue(emailtxt);
-                                databaseReference.child("users").child(emailtxt).child("name").setValue(nametxt);
-                                databaseReference.child("users").child(emailtxt).child("password").setValue(passwordtxt);
+                                databaseReference.child("users").child(nametxt).child("email").setValue(emailtxt);
+                                databaseReference.child("users").child(nametxt).child("name").setValue(nametxt);
+                                databaseReference.child("users").child(nametxt).child("password").setValue(passwordtxt);
 
                                 Toast.makeText(RegisterActivity.this,"User register successfully",Toast.LENGTH_SHORT).show();
                                 finish();
