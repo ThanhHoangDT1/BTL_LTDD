@@ -30,6 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         final EditText name = findViewById(R.id.inputName);
         final EditText email = findViewById(R.id.inputEmail);
+        final EditText role = findViewById(R.id.inputRole);
         final EditText password = findViewById(R.id.inputPassword);
         final  EditText conpassword = findViewById(R.id.inputConfirmPassword);
 
@@ -41,10 +42,11 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final String nametxt = name.getText().toString();
                 final String  emailtxt = email.getText().toString();
+                final String roletxt = role.getText().toString();
                 final String passwordtxt = password.getText().toString();
                 final String conpasswordtxt = conpassword.getText().toString();
 
-                if(nametxt.isEmpty() || emailtxt.isEmpty() || passwordtxt.isEmpty()) {
+                if(nametxt.isEmpty() || emailtxt.isEmpty() ||roletxt.isEmpty() || passwordtxt.isEmpty()) {
                     Toast.makeText(RegisterActivity.this,"Please fill all fields",Toast.LENGTH_SHORT).show();
                 }
                 else if(!passwordtxt.equals(conpasswordtxt)) {
@@ -54,13 +56,14 @@ public class RegisterActivity extends AppCompatActivity {
                     databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if(snapshot.hasChild(nametxt)) {
+                            if(snapshot.hasChild(emailtxt)) {
                                 Toast.makeText(RegisterActivity.this,"Email is already registered",Toast.LENGTH_SHORT).show();
                             }
                             else {
-                                databaseReference.child("users").child(nametxt).child("email").setValue(emailtxt);
-                                databaseReference.child("users").child(nametxt).child("name").setValue(nametxt);
-                                databaseReference.child("users").child(nametxt).child("password").setValue(passwordtxt);
+                                databaseReference.child("users").child(emailtxt).child("email").setValue(emailtxt);
+                                databaseReference.child("users").child(emailtxt).child("name").setValue(nametxt);
+                                databaseReference.child("users").child(emailtxt).child("role").setValue(roletxt);
+                                databaseReference.child("users").child(emailtxt).child("password").setValue(passwordtxt);
 
                                 Toast.makeText(RegisterActivity.this,"User register successfully",Toast.LENGTH_SHORT).show();
                                 finish();

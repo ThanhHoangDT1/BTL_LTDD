@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
                 final String emailtxt = email.getText().toString();
                 final String passwordtxt = password.getText().toString();
 
+
                 if (emailtxt.isEmpty() || passwordtxt.isEmpty()) {
                     Toast.makeText(LoginActivity.this, "Please enter your email or password", Toast.LENGTH_SHORT).show();
                 } else {
@@ -49,10 +50,15 @@ public class LoginActivity extends AppCompatActivity {
                          public void onDataChange(@NonNull DataSnapshot snapshot) {
                              if(snapshot.hasChild(emailtxt)) {
                                  final String getPassword = snapshot.child(emailtxt).child("password").getValue(String.class);
+                                 final String getRole = snapshot.child(emailtxt).child("role").getValue(String.class);
 
                                  if(getPassword.equals(passwordtxt)) {
                                      Toast.makeText(LoginActivity.this,"Successfully Logged in",Toast.LENGTH_SHORT).show();
-                                     startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                                     if(getRole.equals("employee")) {
+                                         startActivity(new Intent(LoginActivity.this, EmployeeActivity.class));
+                                     } else if (getRole.equals("manager")) {
+                                         startActivity(new Intent(LoginActivity.this, ManagerActivity.class));
+                                     }
                                      finish();
                                  } else {
                                      Toast.makeText(LoginActivity.this,"Wrong Password",Toast.LENGTH_SHORT).show();
